@@ -12,7 +12,7 @@ namespace HelloWorld //don't change this
 
         {
 
-          
+           //DAY ONE
 
             // DEMONSTRATION CODE DURING LESSON
 
@@ -108,6 +108,13 @@ namespace HelloWorld //don't change this
 
             string eersteNaam, tweedeNaam, straat, huisNummer, woonPlaats, postCode; //can decalre variables all at once 
 
+
+            //other console properties and methods
+            Console.Beep(500, 1000); //beep every second
+            Console.ForegroundColor = ConsoleColor.Green; //changes color
+            Console.BackgroundColor = ConsoleColor.White;
+            //Console.ResetColor();// sets it back to the default color of console
+
             Console.Write("Voornaam:");
             eersteNaam = Console.ReadLine();
 
@@ -132,8 +139,9 @@ namespace HelloWorld //don't change this
 
 
             Console.ReadLine();  // This ReadLine ensures the console stays open and doesn't close.
+            
 
-
+           
 
 
 
