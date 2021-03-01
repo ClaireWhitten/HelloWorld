@@ -191,9 +191,9 @@ namespace lesson3
 
              //Oefening 1
 
-             Console.WriteLine("Getal 1:");
+             Console.Write("Getal 1:");
              int num1 = Convert.ToInt32(Console.ReadLine());
-             Console.WriteLine("Getal 2:");
+             Console.Write("Getal 2:");
              int num2 = Convert.ToInt32(Console.ReadLine());
 
              if (num1 > num2)
@@ -259,12 +259,12 @@ namespace lesson3
              string answer2;
 
 
-             if (answer == "Y")
+             if (answer.ToUpper() == "Y")   //change the users answer to caps incase they typed in a small y
              {
                  Console.WriteLine("Heeft u de situatie onder controle? (Y/N)");
                  answer2 = Console.ReadLine();
 
-                 if (answer2 == "Y")
+                 if (answer2.ToUpper() == "Y")
                  {
                      Console.WriteLine("Het alarm wordt uitgeschakeld");
                  }
@@ -283,32 +283,27 @@ namespace lesson3
 
              int teller = 0;
              Console.WriteLine("Heb je vandaag moeten lachen? (Y/N)");
-             string antwoord1 = Console.ReadLine();
-             if (antwoord1 == "Y")
+             if (Console.ReadLine() == "Y")  //antwoord1.toUpper is better
              {
                  teller = teller+1;
              }
              Console.WriteLine("Heb je vandaag iets productief gedaan? (Y/N)");
-             string antwoord2 = Console.ReadLine();
-             if (antwoord2 == "Y")
+             if (Console.ReadLine() == "Y")
              {
                  teller = teller+1;
              }
              Console.WriteLine("Scheen de zon vandaag? (Y/N)");
-             string antwoord3 = Console.ReadLine();
-             if (antwoord3 == "Y")
+             if (Console.ReadLine() == "Y")
              {
                  teller = teller+1;
              }
              Console.WriteLine("Heb je iets leker gegeten vandaag? (Y/N)");
-             string antwoord4 = Console.ReadLine();
-             if (antwoord4 == "Y")
+             if (Console.ReadLine() == "Y")
              {
                  teller = teller+1;
              }
              Console.WriteLine("Kijk je uit naar morgen? (Y/N)");
-             string antwoord5 = Console.ReadLine();
-             if (antwoord5 == "Y")
+             if (Console.ReadLine() == "Y")
              {
                  teller = teller+1;
              }
@@ -473,39 +468,39 @@ namespace lesson3
             Console.WriteLine($"Na {letterInput} komt {Convert.ToChar(letterInput+1)}"); 
 
 
-            //oefening 10
+            //oefening 10 - check again to see if works , if console.read doesn't work change to else 
             string a1;
             string a2;
             string a3;
 
             Console.WriteLine("Hoe gaat het met je?\n 1.Goed   2.Niet goed");
-            a1 = Console.ReadLine();
-            if (a1 == "1")
+           
+            if (Console.ReadLine() == "1")
             {
                 Console.WriteLine("Waarom voel je zo goed?\n 1.Het is mijn verjaardag \n 2.Ik heb goed geslapen");
-                a2 = Console.ReadLine();
-                if (a2 == "1")
+                
+                if (Console.ReadLine() == "1")
                 {
                     Console.WriteLine("Happy Birthday! Hoe oud ben je? \n 1.Don't ask me my age!   \n 2. Feeling 22!");
-                    a3 = Console.ReadLine();
-                    if (a3 == "1")
+                 
+                    if (Console.ReadLine() == "1")
                     {
                         Console.WriteLine("Oops, sorry!");
-                    } else if (a3 == "2")
+                    } else if (Console.ReadLine() == "2")
                     {
                         Console.WriteLine("Proficiat!");
                     }
 
                 }
-                else if (a2 == "2")
+                else if (Console.ReadLine() == "2")
                 {
                     Console.WriteLine("Hoeveel uren? 1. 8 uren  2. 14 uren ");
-                    a3 = Console.ReadLine();
-                    if (a3 == "1")
+                    
+                    if (Console.ReadLine() == "1")
                     {
                         Console.WriteLine("Perfectly rested!");
                     }
-                    else if (a3 == "2")
+                    else if (Console.ReadLine() == "2")
                     {
                         Console.WriteLine("Lazy!");
                     }
@@ -513,32 +508,31 @@ namespace lesson3
               
 
             }
-            else if (a1 == "2")
+            else if (Console.ReadLine() == "2")
             {
                 Console.WriteLine("Waarom voel je niet zo goed?\n 1.Ik heb honger \n 2.Ik voel me ziek");
-                a2 = Console.ReadLine();
-                if (a2 == "1")
+                 
+                if (Console.ReadLine() == "1")
                 {
                     Console.WriteLine("Eat something! Wat wil je?  1. Chips   2. ijs");
-                    a3 = Console.ReadLine();
-                    if (a3 == "1")
+                    if (Console.ReadLine() == "1")
                     {
                         Console.WriteLine("Smaakelijk!");
                     }
-                    else if (a3 == "2")
+                    else if (Console.ReadLine() == "2")
                     {
                         Console.WriteLine("Goede keuze!");
                     }
                 }
-                else if (a2 == "2")
+                else if (Console.ReadLine() == "2")
                 {
                     Console.WriteLine("Hoofdpijn?  1. Ja    2.Nee");
-                    a3 = Console.ReadLine();
-                    if (a3 == "1")
+                    
+                    if (Console.ReadLine() == "1")
                     {
                         Console.WriteLine("Veel beterschap");
                     }
-                    else if (a3 == "2")
+                    else if (Console.ReadLine() == "2")
                     {
                         Console.WriteLine("Ocharme!");
                     }
